@@ -1,4 +1,4 @@
-# ws
+# bench
 
 To install dependencies:
 
