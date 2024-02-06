@@ -96,10 +96,6 @@ export function page(props: { html: string; css?: string }) {
             color: lightblue;
           }
 
-          a {
-            color: #BFCAD0;
-          }
-
           input {
             padding: 2px;
           }

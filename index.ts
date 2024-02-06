@@ -7,29 +7,38 @@ const server = Bun.serve({
       page({
         html: `
         <h1>My bench</h1>
-
         <div class="code">
           <code>
 bun create imsteev/bench
           </code>
         </div>
+        <div class="code">
+          <pre>
+├── README.md
+├── bun.lockb
+├── index.ts
+├── package.json
+├── templates
+│   ├── root.ts
+│   └── utils.ts
+└── tsconfig.json
+</pre>
+<a href="https://github.com/imsteev/bench">repo</a>
+        </div>
         `,
         css: `html {
           background: #C3CED6;
-        }
-
-        h1 {
           color: forestgreen;
         }
 
-        code {
-          background: #36454F;
+        code, pre {
+          background: #A7B8C3;
           padding: 1rem;
           border-radius: 5px;
+          align-items: flex-start;
         }
 
         .code {
-          display: inline-block;
           margin-top: 2rem;
         }
         `,
