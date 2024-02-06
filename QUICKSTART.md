@@ -1,6 +1,5 @@
 # What is this
-A web application skeleton, tuned to my preferences. My hope is that it is
-helpful to others.
+A web application skeleton, tuned to my preferences.
 
 Stack: Bun on the server-side serving HTMX to clients
 
