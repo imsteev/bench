@@ -1,8 +1,18 @@
+import { Mux } from "./mux/mux";
 import { root } from "./templates/root";
+
+const mux = new Mux();
+mux.get(`/ids/(?<id>\d+)`, (_, params) => {
+  return new Response(JSON.stringify(params));
+});
 
 const server = Bun.serve({
   port: process.env.PORT || 3000,
-  fetch(req, server) {
+  fetch(req) {
+    if (req) {
+      return mux.handle(req);
+    }
+
     return new Response(
       root({
         html: `
