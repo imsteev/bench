@@ -1,6 +1,5 @@
 function escapeHTML(s?: string): string {
   if (!s) return "";
-  console.log(s);
   // https://owasp.deteact.com/cheat/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html#rule-1---html-escape-before-inserting-untrusted-data-into-html-element-content
   return s
     .replaceAll("&", "&amp")
@@ -18,7 +17,6 @@ export function html(arr: TemplateStringsArray, ...args: any[]) {
   arr.forEach((s) => {
     buf += s;
     const arg = args.shift();
-    console.log({ args });
     if (arg) {
       buf += escapeHTML(arg);
     }
